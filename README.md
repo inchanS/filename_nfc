@@ -45,6 +45,15 @@ python3 normalize_nfc.py ./Downloads
 
 # 상세한 출력과 함께
 python3 normalize_nfc.py /Users/yourname/Documents --verbose
+
+# NFC + 공백을 언더스코어로 변경
+python3 normalize_nfc.py --replace-spaces
+
+# NFC + 공백을 하이픈으로 변경
+python3 normalize_nfc.py --replace-spaces -
+
+# NFC + 공백을 점으로 변경
+python3 normalize_nfc.py --replace-spaces .
 ```
 
 
@@ -62,6 +71,8 @@ python3 normalize_nfc.py [-h] [-v] [path]
 
 - `-h, --help`: 도움말 표시
 - `-v, --verbose`: 상세한 출력 표시 (스캔 과정, 개별 파일 변환 정보 등)
+- `--replace-spaces`: 파일명에 있는 공백을 언더바`_`로 변환
+- `--replace-spaces <기호>`: 파일명에 있는 공백을 <기호>로 변환
 
 
 ## 테스트 방법
